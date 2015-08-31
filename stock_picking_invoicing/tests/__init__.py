@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2015 Agile Business Group sagl
-#    (<http://www.agilebg.com>)
+#    Copyright (C) 2015 Lorenzo Battistini <lorenzo.battistini@agilebg.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published
@@ -19,19 +18,4 @@
 #
 ##############################################################################
 
-from openerp.osv import orm, fields
-
-
-class AccountConfigSettings(orm.TransientModel):
-    _inherit = 'account.config.settings'
-
-    _columns = {
-        'group_use_product_description_per_inv_line': fields.boolean(
-            """Allow using only the product description on the
-            invoice lines""",
-            implied_group="account_invoice_line_description."
-            "group_use_product_description_per_inv_line",
-            help="""Allows you to use only product description on the
-            invoice lines."""
-        ),
-    }
+from . import test_picking_invoicing
