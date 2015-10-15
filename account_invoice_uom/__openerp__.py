@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Copyright (C) 2015 Agile Business Group sagl
-#    (<http://www.agilebg.com>)
+#    Copyright (C) 2014-15 Agile Business Group sagl (<http://www.agilebg.com>)
+#    Author: Lorenzo Battistini <lorenzo.battistini@agilebg.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published
@@ -19,18 +19,22 @@
 #
 ##############################################################################
 {
-    'name': "Account invoice line description",
-    'version': '8.0.1.0.0',
-    'category': 'Generic Modules/Accounting',
+    "name": "Unit of measure for invoices",
+    "version": "8.0.1.0.0",
     'author': "Agile Business Group, Odoo Community Association (OCA)",
-    'website': 'http://www.agilebg.com',
+    "website": "http://www.agilebg.com",
     'license': 'AGPL-3',
+    "category": "Account",
     "depends": [
-        'account',
+        'sale_stock',
+        'stock_picking_invoice_link',
     ],
+    "demo": [],
     "data": [
-        'security/invoice_security.xml',
-        'res_config_view.xml',
+        'account_invoice_line_view.xml',
     ],
-    "installable": True
+    'test': [
+        'test/account_invoice_uom.yml',
+    ],
+    'installable': True,
 }

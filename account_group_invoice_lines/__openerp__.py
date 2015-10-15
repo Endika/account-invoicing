@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2012-2013 Therp BV (<http://therp.nl>).
+#    account_group_invoice_lines module for Odoo
+#    Copyright (C) 2012-2015 SYLEAM Info Services (<http://www.syleam.fr/>)
+#    Copyright (C) 2015 Akretion (http://www.akretion.com)
+#    @author: Sébastien LANGE <sebastien.lange@syleam.fr>
+#    @author: Alexis de Lattre <alexis.delattre@akretion.com>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,13 +21,16 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+
 {
-    "name": "Automatically select invoicing partner on invoice",
-    "version": "8.0.0.2.0",
-    "author": "Therp BV,Odoo Community Association (OCA)",
-    "category": 'Accounting & Finance',
-    'website': 'https://github.com/OCA/account-invoicing',
+    'name': 'Account Group Invoice Lines',
+    'version': '8.0.1.1.0',
+    'category': 'Accounting & Finance',
+    'summary': 'Add option to group invoice line per account',
+    'author': 'SYLEAM,Akretion,Odoo Community Association (OCA)',
     'license': 'AGPL-3',
+    'website': 'http://www.syleam.fr/',
     'depends': ['account'],
+    'data': ['account_view.xml'],
     'installable': True,
 }
